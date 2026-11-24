@@ -23,7 +23,7 @@ int main(){
     stud.enroll(&course1);
     stud.enroll(&course2);
 
-    std::cout << "    1. Professory" << std::endl;
+    /*std::cout << "    1. Professory" << std::endl;
     std::cout << "Professor: " << prof1.getName() << " | Kurs: " << course1.getName() << std::endl;
     std::cout << "Professor: " << prof2.getName() << " | Kurs: " << course2.getName() << std::endl;
 
@@ -35,7 +35,9 @@ int main(){
 
     std::cout << "\n    3.Topics count" << std::endl;
     std::cout << "Kurs " << course1.getName() << ": " << course1.getTopics().size() << std::endl;
-    std::cout << "Kurs " << course2.getName() << ": " << course2.getTopics().size() << std::endl;
+    std::cout << "Kurs " << course2.getName() << ": " << course2.getTopics().size() << std::endl;*/
+
+    std::cout << stud.getName() << " (" << stud.getStatus() << "), zvanie: " << stud.getTuition() << "\n";
 
 
     return 0;
