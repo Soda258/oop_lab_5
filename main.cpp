@@ -8,11 +8,17 @@
 int main(){
     BudgetStudent alice("Alice", 1500);
     PaidStudent bob("Bob", 200000);
-    std::cout << alice.getName() << " (" << alice.getStatus() << "), tuition: " << alice.getTuition() 
-    << ", scholarship: " << alice.getScholarship() << "\n";
-    std::cout << bob.getName() << " (" << bob.getStatus() << "), tuition: " << bob.getTuition() << "\n";
+    Professor prof("Ivanov");
+    Course oop("OOP", &prof);
 
+    oop.enrollStudent(&alice);
+    oop.enrollStudent(&bob);
+    oop.enrollStudent(&alice);
 
-
+    std::cout << oop.getName() << " (Prof. " << oop.getProfessor()->getName() << ")\n";
+    std::cout << "Students: " << oop.getStudentCount() << "\n";
+    for(const Student* s : oop.getStudents()){
+        std::cout << " - " << s->getName() << " (" << s->getStatus() << ")\n";}
+        
     return 0;
 }
